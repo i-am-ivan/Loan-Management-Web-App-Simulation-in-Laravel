@@ -225,9 +225,9 @@
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                            <p>{{ '1001' }}</p>
+                                            <p>{{ '1002' }}</p>
                                           </td>
-                                          <td>  {{ 'Asset Finance' }} </td>
+                                          <td>  {{ 'Business Loan' }} </td>
                                           <td>
                                               <p>
                                                   {{ '1,378' }}
@@ -246,9 +246,9 @@
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                            <p>{{ '1001' }}</p>
+                                            <p>{{ '1003' }}</p>
                                           </td>
-                                          <td>  {{ 'Asset Finance' }} </td>
+                                          <td>  {{ 'Personal Loan' }} </td>
                                           <td>
                                               <p>
                                                   {{ '1,378' }}
@@ -267,55 +267,87 @@
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                          <img src="../../assets/images/faces/face4.jpg" alt="image">
-                                        </td>
-                                        <td> Peter Meggik </td>
-                                        <td>
-                                          <div class="progress">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
-                                        </td>
-                                        <td> $ 77.99 </td>
-                                        <td> May 15, 2015 </td>
+                                            <p>{{ '1004' }}</p>
+                                          </td>
+                                          <td>  {{ 'Mortgage' }} </td>
+                                          <td>
+                                              <p>
+                                                  {{ '1,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ '4,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ 'KES 367,987.73' }}
+                                              </p>
+                                          </td>
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                          <img src="../../assets/images/faces/face5.jpg" alt="image">
-                                        </td>
-                                        <td> Edward </td>
-                                        <td>
-                                          <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
-                                        </td>
-                                        <td> $ 160.25 </td>
-                                        <td> May 03, 2015 </td>
+                                            <p>{{ '1005' }}</p>
+                                          </td>
+                                          <td>  {{ 'Payday Loans' }} </td>
+                                          <td>
+                                              <p>
+                                                  {{ '1,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ '4,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ 'KES 367,987.73' }}
+                                              </p>
+                                          </td>
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                          <img src="../../assets/images/faces/face6.jpg" alt="image">
-                                        </td>
-                                        <td> John Doe </td>
-                                        <td>
-                                          <div class="progress">
-                                            <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
-                                        </td>
-                                        <td> $ 123.21 </td>
-                                        <td> April 05, 2015 </td>
+                                            <p>{{ '1006' }}</p>
+                                          </td>
+                                          <td>  {{ 'Digital Loans' }} </td>
+                                          <td>
+                                              <p>
+                                                  {{ '1,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ '4,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ 'KES 367,987.73' }}
+                                              </p>
+                                          </td>
                                       </tr>
                                       <tr>
                                         <td class="py-1">
-                                          <img src="../../assets/images/faces/face7.jpg" alt="image">
-                                        </td>
-                                        <td> Henry Tom </td>
-                                        <td>
-                                          <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
-                                        </td>
-                                        <td> $ 150.00 </td>
-                                        <td> June 16, 2015 </td>
+                                            <p>{{ '1007' }}</p>
+                                          </td>
+                                          <td>  {{ 'Education Loans' }} </td>
+                                          <td>
+                                              <p>
+                                                  {{ '1,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ '4,378' }}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              <p>
+                                                  {{ 'KES 367,987.73' }}
+                                              </p>
+                                          </td>
                                       </tr>
                                     </tbody>
                                   </table>
