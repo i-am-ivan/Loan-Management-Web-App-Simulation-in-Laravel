@@ -18,7 +18,7 @@
                 <h2 class="text-center text-dark mt-5">Loan App Login</h2>
                 <div class="card my-5">
 
-                  <form class="card-body cardbody-color p-lg-5" action="{{ url('adminDashboard') }}">
+                    <form class="card-body cardbody-color p-lg-5" action="{{ route('admin.dashboard') }}">
 
                     <div class="text-center">
                       <img src="https://cdn.pixabay.com/photo/2017/07/18/23/40/group-2517459_1280.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"

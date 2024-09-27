@@ -2,27 +2,49 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Admin Login Page
 Route::get('/', function () {
     return view('adminLogin', ['name' => 'i-am-ivan']);
 });
 
-Route::get('/Admin/adminDashboard', function(){
-    return view('adminDashboard', ['heading' => 'Admin Dashboard']);
+// Admin routes
+Route::prefix('Admin')->group(function () {
+    // Admin Dashboard
+    Route::get('/adminDashboard', function(){
+        return view('Admin.adminDashboard', ['heading' => 'Admin Dashboard']);
+    })->name('admin.dashboard');
+
+    // Admin User Profile
+    Route::get('/userProfile', function(){
+        return view('Admin.userProfile', ['heading' => 'My Profile']);
+    })->name('admin.user-profile');
 });
 
-Route::get('/Admin/userProfile', function(){
-    return view('userProfile', ['heading' => 'My Profile']);
+// Loan routes
+Route::prefix('Loans')->group(function () {
+    // Loan Types Dashboard
+    Route::get('/loanTypesDashboard', function(){
+        return view('Loans.loanTypesDashboard', ['heading' => 'Loan Types']);
+    })->name('loans.loan-types');
+
+    // Customer Loans Dashboard
+    Route::get('/customerLoansDashboard', function(){
+        return view('Loans.customerLoansDashboard', ['heading' => 'Loans']);
+    })->name('loans.customer-loans');
 });
 
-Route::get('/Admin/loanManagementDashboard', function(){
-    return view('loanManagementDashboard', ['heading' => 'Loans']);
+// Customer routes
+Route::prefix('Customers')->group(function () {
+    // Customer Management Dashboard
+    Route::get('/customersDashboard', function(){
+        return view('Customers.customersDashboard', ['heading' => 'Customers']);
+    })->name('customers.customers-dashboard');
 });
 
-Route::get('/Admin/customerManagementDashboard', function(){
-    return view('customerManagementDashboard', ['heading' => 'Customers']);
+// User routes
+Route::prefix('Users')->group(function () {
+    // Users Management Dashboard
+    Route::get('/usersDashboard', function(){
+        return view('Users.usersDashboard', ['heading' => 'Users']);
+    })->name('users.users-dashboard');
 });
-
-Route::get('/Admin/usersManagementDashboard', function(){
-    return view('usersManagementDashboard', ['heading' => 'Users']);
-});
-
