@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/vendors/typicons/typicons.css">
     <link rel="stylesheet" href="../assets/vendors/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="a../ssets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -47,9 +47,24 @@
         <div class="navbar-menu-wrapper d-flex align-items-top">
           <ul class="navbar-nav">
             <li class="nav-item fw-semibold d-none d-lg-block ms-0">
-              <h1 class="welcome-text"><span class="text-black fw-bold">{{ $heading }}</span> Overview </h1>
+              <h1 class="welcome-text"><span class="text-black fw-bold"> <i class="menu-icon mdi mdi-chart-areaspline"></i> {{ $heading }}</span> Overview </h1>
               <h3 class="welcome-sub-text">Loan performance summary this week </h3>
             </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <p class="mb-1 mt-3 fw-semibold"><i class="menu-icon mdi mdi-account-circle-outline"></i> Allen Moreno</p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                  <div class="dropdown-header text-center">
+                    <img class="img-md rounded-circle" src="../assets/images/faces/face8.jpg" alt="Profile image">
+                    <p class="mb-1 mt-3 fw-semibold">{{ 'username' }}</p>
+                  </div>
+                  <a class="dropdown-item" href="{{ route('admin.user-profile') }}"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile </a>
+                  <a class="dropdown-item" href="{{ route('admin') }}"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+                </div>
+              </li>
           </ul>
           <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>
@@ -111,7 +126,7 @@
                 </a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="docs/documentation.html">
+              <a class="nav-link" href="{{ route('admin') }}">
                 <i class="menu-icon mdi mdi-logout"></i>
                 <span class="menu-title">Logout</span>
               </a>
@@ -177,180 +192,164 @@
                       <div class="row">
                         <div class="col-lg-12 grid-margin stretch-card">
                             <div class="card">
-                              <div class="card-body">
-                                <h4 class="card-title">Current Loan Product Performance</h4>
-                                <p class="card-description"> Shows how each Loan Product has been Performing Current Month <code>Stats are subjective to change</code>
-                                </p>
-                                <div>
-                                    <div class="btn-wrapper">
-                                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-printer"></i> Print</a>
+                                <div class="card-body">
+                                  <h4 class="card-title">Data table</h4>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="table-responsive">
+                                        <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="order-listing_length"><label>Show <select name="order-listing_length" aria-controls="order-listing" class="custom-select custom-select-sm form-control"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="-1">All</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="order-listing_filter" class="dataTables_filter"><label><input type="search" class="form-control" placeholder="Search" aria-controls="order-listing"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="order-listing" class="table dataTable no-footer" aria-describedby="order-listing_info">
+                                          <thead>
+                                            <tr><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Order #: activate to sort column ascending" style="width: 115.203px;">Order #</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Purchased On: activate to sort column ascending" style="width: 192.797px;">Purchased On</th><th class="sorting sorting_asc" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Customer: activate to sort column descending" style="width: 141.938px;" aria-sort="ascending">Customer</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Ship to: activate to sort column ascending" style="width: 111.109px;">Ship to</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Base Price: activate to sort column ascending" style="width: 152.688px;">Base Price</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Purchased Price: activate to sort column ascending" style="width: 218.281px;">Purchased Price</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 127.078px;">Status</th><th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1" aria-label="Actions: activate to sort column ascending" style="width: 120.922px;">Actions</th></tr>
+                                          </thead>
+                                          <tbody>
+
+
+
+
+
+
+
+
+
+
+                                          <tr class="odd">
+                                              <td class="">7</td>
+                                              <td>2011/03/11</td>
+                                              <td class="sorting_1">Cris</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-success">Closed</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="even">
+                                              <td class="">2</td>
+                                              <td>2015/04/01</td>
+                                              <td class="sorting_1">Doe</td>
+                                              <td>Brazil</td>
+                                              <td>$4500</td>
+                                              <td>$7500</td>
+                                              <td>
+                                                <label class="badge badge-danger">Pending</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="odd">
+                                              <td class="">1</td>
+                                              <td>2012/08/03</td>
+                                              <td class="sorting_1">Edinburgh</td>
+                                              <td>New York</td>
+                                              <td>$1500</td>
+                                              <td>$3200</td>
+                                              <td>
+                                                <label class="badge badge-info">On hold</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="even">
+                                              <td class="">9</td>
+                                              <td>2016/11/12</td>
+                                              <td class="sorting_1">John</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-success">Closed</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="odd">
+                                              <td class="">3</td>
+                                              <td>2010/11/21</td>
+                                              <td class="sorting_1">Sam</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-success">Closed</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="even">
+                                              <td class="">4</td>
+                                              <td>2016/01/12</td>
+                                              <td class="sorting_1">Sam</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-success">Closed</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="odd">
+                                              <td class="">5</td>
+                                              <td>2017/12/28</td>
+                                              <td class="sorting_1">Sam</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-success">Closed</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="even">
+                                              <td class="">6</td>
+                                              <td>2000/10/30</td>
+                                              <td class="sorting_1">Sam</td>
+                                              <td>Tokyo</td>
+                                              <td>$2100</td>
+                                              <td>$6300</td>
+                                              <td>
+                                                <label class="badge badge-info">On-hold</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="odd">
+                                              <td class="">8</td>
+                                              <td>2015/06/25</td>
+                                              <td class="sorting_1">Tim</td>
+                                              <td>Italy</td>
+                                              <td>$6300</td>
+                                              <td>$2100</td>
+                                              <td>
+                                                <label class="badge badge-info">On-hold</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr><tr class="even">
+                                              <td class="">10</td>
+                                              <td>2003/12/26</td>
+                                              <td class="sorting_1">Tom</td>
+                                              <td>Germany</td>
+                                              <td>$1100</td>
+                                              <td>$2300</td>
+                                              <td>
+                                                <label class="badge badge-danger">Pending</label>
+                                              </td>
+                                              <td>
+                                                <button class="btn btn-outline-primary">View</button>
+                                              </td>
+                                            </tr></tbody>
+                                        </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="order-listing_previous"><a aria-controls="order-listing" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="order-listing" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="order-listing_next"><a aria-controls="order-listing" aria-disabled="true" role="link" data-dt-idx="next" tabindex="-1" class="page-link">Next</a></li></ul></div></div></div></div>
+                                      </div>
                                     </div>
                                   </div>
-                                <div class="table-responsive">
-                                  <table class="table table-striped">
-                                    <thead>
-                                      <tr>
-                                        <th> Loan Product Code </th>
-                                        <th> Product Type </th>
-                                        <th> Total Pending </th>
-                                        <th> Total Customers </th>
-                                        <th> Total Disbursed </th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td class="py-1">
-                                          <p>{{ '1001' }}</p>
-                                        </td>
-                                        <td>  {{ 'Asset Finance' }} </td>
-                                        <td>
-                                            <p>
-                                                {{ '1,378' }}
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                {{ '4,378' }}
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p>
-                                                {{ 'KES 367,987.73' }}
-                                            </p>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1002' }}</p>
-                                          </td>
-                                          <td>  {{ 'Business Loan' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1003' }}</p>
-                                          </td>
-                                          <td>  {{ 'Personal Loan' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1004' }}</p>
-                                          </td>
-                                          <td>  {{ 'Mortgage' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1005' }}</p>
-                                          </td>
-                                          <td>  {{ 'Payday Loans' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1006' }}</p>
-                                          </td>
-                                          <td>  {{ 'Digital Loans' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="py-1">
-                                            <p>{{ '1007' }}</p>
-                                          </td>
-                                          <td>  {{ 'Education Loans' }} </td>
-                                          <td>
-                                              <p>
-                                                  {{ '1,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ '4,378' }}
-                                              </p>
-                                          </td>
-                                          <td>
-                                              <p>
-                                                  {{ 'KES 367,987.73' }}
-                                              </p>
-                                          </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
                                 </div>
                               </div>
-                            </div>
-                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -387,9 +386,12 @@
     <script src="../assets/js/settings.js"></script>
     <script src="../assets/js/hoverable-collapse.js"></script>
     <script src="../assets/js/todolist.js"></script>
+    <script src="../assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="../assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="../assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="../assets/js/data-table.js"></script>
     <script src="../assets/js/dashboard.js"></script>
     <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
     <!-- End custom js for this page-->

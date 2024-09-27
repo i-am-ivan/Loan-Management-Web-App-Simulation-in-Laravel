@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 // Admin Login Page
 Route::get('/', function () {
-    return view('adminLogin', ['name' => 'i-am-ivan']);
-});
+    return view('adminLogin', ['name' => 'Sign in']);
+})->name('admin');
 
 // Admin routes
 Route::prefix('Admin')->group(function () {
