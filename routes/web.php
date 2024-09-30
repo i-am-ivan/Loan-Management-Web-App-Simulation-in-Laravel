@@ -11,12 +11,12 @@ Route::get('/', function () {
 Route::prefix('Admin')->group(function () {
     // Admin Dashboard
     Route::get('/adminDashboard', function(){
-        return view('Admin.adminDashboard', ['heading' => 'Admin Dashboard','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'At a glance summary of the loan system.']);
+        return view('Admin.adminDashboard', ['heading' => 'Main Dashboard', 'subHeading1' => 'Summary','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'At a glance summary of the loan system.']);
     })->name('admin.dashboard');
 
     // Admin User Profile
     Route::get('/userProfile', function(){
-        return view('Admin.userProfile', ['heading' => 'My Profile','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'You have full control to manage user account setting.']);
+        return view('Admin.userProfile', ['heading' => 'My Profile','subHeading1' => '','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage user account setting.']);
     })->name('admin.user-profile');
 });
 
@@ -24,12 +24,12 @@ Route::prefix('Admin')->group(function () {
 Route::prefix('Loans')->group(function () {
     // Loan Types Dashboard
     Route::get('/loanTypesDashboard', function(){
-        return view('Loans.loanTypesDashboard', ['heading' => 'Loan Types','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'You have full control to manage user account setting.']);
+        return view('Loans.loanTypesDashboard', ['heading' => 'Loan Types','subHeading1' => '', 'userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage loans.']);
     })->name('loans.loan-types');
 
     // Customer Loans Dashboard
     Route::get('/customerLoansDashboard', function(){
-        return view('Loans.customerLoansDashboard', ['heading' => 'Loans','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'You have full control to manage user account setting.']);
+        return view('Loans.customerLoansDashboard', ['heading' => 'Loans','subHeading1' => '','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage loans.']);
     })->name('loans.customer-loans');
 });
 
@@ -37,7 +37,7 @@ Route::prefix('Loans')->group(function () {
 Route::prefix('Customers')->group(function () {
     // Customer Management Dashboard
     Route::get('/customersDashboard', function(){
-        return view('Customers.customersDashboard', ['heading' => 'Customers','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'You have full control to manage user account setting.']);
+        return view('Customers.customersDashboard', ['heading' => 'Customers','subHeading1' => '','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage customer account setting.']);
     })->name('customers.customers-dashboard');
 });
 
@@ -45,6 +45,8 @@ Route::prefix('Customers')->group(function () {
 Route::prefix('Users')->group(function () {
     // Users Management Dashboard
     Route::get('/usersDashboard', function(){
-        return view('Users.usersDashboard', ['heading' => 'Users','userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading' => 'You have full control to manage user account setting.', 'accountStatus1' => 'Active']);
+        return view('Users.usersDashboard', ['heading' => 'Users', 'subHeading1' => 'Management', 'userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage user account setting.', 'accountStatus1' => 'Active']);
     })->name('users.users-dashboard');
+    Route::post('usersDashboard','UsersController@addNewUser');
+    Route::get('usersDashboard','UsersController@getAllUsers');
 });

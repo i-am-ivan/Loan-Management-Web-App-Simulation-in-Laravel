@@ -73,9 +73,9 @@
                                                                         <p class="card-subtitle card-subtitle-dash">There are {{ '327' }} User Accounts</p>
                                                                         </div>
                                                                         <div>
-                                                                            <button class="btn btn-success btn-lg text-white mb-0 me-0" type="button">
-                                                                                <i class="mdi mdi-account-plus"></i>Add new user
-                                                                            </button>
+                                                                            <label>
+                                                                                <input type="search" class="form-control" placeholder="Search" aria-controls="order-listing">
+                                                                            </label>
                                                                             <button class="btn btn-default btn-lg text-success mb-0 me-0" type="button">
                                                                                 <i class="mdi mdi-printer"></i>Print
                                                                             </button>
@@ -86,9 +86,10 @@
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>User ID</th>
-                                                                                    <th>User</th>
+                                                                                    <th><i class="mdi mdi-account text-muted me-1"></i>User</th>
                                                                                     <th>Account Status</th>
-                                                                                    <th>Creator</th>
+                                                                                    <th><i class="mdi mdi-account-edit text-muted me-1"></i>Creator</th>
+                                                                                    <th><i class="mdi mdi-calendar text-muted me-1"></i> Created On</th>
                                                                                     <th>Actions</th>
                                                                                 </tr>
                                                                             </thead>
@@ -118,8 +119,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -148,8 +152,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -178,8 +185,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -208,8 +218,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -238,8 +251,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -268,8 +284,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -296,8 +315,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
+                                                                                        September 28, 2024 18:56:42
+                                                                                    </td>
+                                                                                    <td>
                                                                                         <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
@@ -324,8 +346,11 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
+                                                                                    September 28, 2024 18:56:42
+                                                                                </td>
+                                                                                <td>
                                                                                     <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                     </div>
                                                                                 </td>
                                                                                 </tr>
@@ -352,8 +377,11 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
+                                                                                    September 28, 2024 18:56:42
+                                                                                </td>
+                                                                                <td>
                                                                                     <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                     </div>
                                                                                 </td>
                                                                                 </tr>
@@ -380,15 +408,43 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
+                                                                                    September 28, 2024 18:56:42
+                                                                                </td>
+                                                                                <td>
                                                                                     <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
                                                                                     </div>
                                                                                 </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
+                                                                    <br>
+                                                                    <div class="row">
+                                                                        <br>
+                                                                        <div class="col-sm-12 col-md-8">
+                                                                            <p class="card-subtitle card-subtitle-dash" id="order-listing_info" role="status" aria-live="polite">
+                                                                                Showing 1 to 10 of 10 entries
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-4">
+                                                                            <div class="dataTables_paginate paging_simple_numbers card-subtitle card-subtitle-dash" id="order-listing_paginate">
+                                                                                <ul class="pagination">
+                                                                                    <li class="paginate_button page-item previous disabled" id="order-listing_previous">
+                                                                                        <a aria-controls="order-listing" aria-disabled="true" role="link" data-dt-idx="previous" tabindex="-1" class="page-link">Previous</a>
+                                                                                    </li>
+                                                                                    <li class="paginate_button page-item active">
+                                                                                        <a href="#" aria-controls="order-listing" role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
+                                                                                    </li>
+                                                                                    <li class="paginate_button page-item next disabled" id="order-listing_next">
+                                                                                        <a aria-controls="order-listing" aria-disabled="true" role="link" data-dt-idx="next" tabindex="-1" class="page-link">Next</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -418,13 +474,13 @@
                                                                                       </div>
                                                                                   </div>
                                                                               </div>
-                                                                              <form class="forms-sample">
+                                                                              <form class="forms-sample" method="POST" action="">
                                                                                 <div class="form-group col-sm-10">
-                                                                                  <label for="exampleInputUsername1">Username</label>
-                                                                                  <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" minlength="4">
+                                                                                  <label for="exampleInputUsername1"><i class="mdi mdi-account text-muted me-1"></i> Username</label>
+                                                                                  <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" minlength="4" @required(true)>
                                                                                 </div>
                                                                                 <div class="form-group col-sm-10">
-                                                                                  <label for="exampleInputEmail1">Email address</label>
+                                                                                  <label for="exampleInputEmail1"><i class="mdi mdi-email text-muted me-1"></i>Email address</label>
                                                                                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="">
                                                                                 </div>
                                                                                 <div class="nk-block-head-content">
@@ -442,14 +498,39 @@
                                                                                 </div>
                                                                                 <div class="form-group col-sm-12">
                                                                                     <div class=" col-sm-10">
-                                                                                        <label for="exampleInputPassword1">Password</label>
+                                                                                        <label for="exampleInputPassword1"><i class="mdi mdi-account-key text-muted me-1"></i>Password</label>
                                                                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="8" required="">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group col-sm-12">
                                                                                     <div class=" col-sm-10">
-                                                                                        <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                                                                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password" minlength="8" required="">
+                                                                                        <label for="exampleInputConfirmPassword1"><i class="mdi mdi-account-key text-muted me-1"></i>Confirm Password</label>
+                                                                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder=" Confirm Password" minlength="8" required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="nk-block-head-content">
+                                                                                    <h5 class="nk-block-title fw-normal">
+                                                                                        User account status settings
+                                                                                    </h5>
+                                                                                    <div class="card-description">
+                                                                                        <p>Determine the status of the new account
+                                                                                            <span class="text-primary">
+                                                                                                <em class="icon ni ni-info" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Tooltip on right" data-bs-original-title="Tooltip on right">
+                                                                                                </em>
+                                                                                            </span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group col-sm-12">
+                                                                                    <div class=" col-sm-10">
+                                                                                        <label for="exampleInputPassword1">
+                                                                                            <i class="mdi mdi-account-lock text-muted me-1"></i>Account Status
+                                                                                        </label>
+                                                                                        <!--Dropdown foe user status-->
+                                                                                        <select class="form-control js-select2 select2-hidden-accessible" data-select2-id="10" tabindex="-1" aria-hidden="true">
+                                                                                            <option value="Pending" data-select2-id="10" id="accountStatus" value="Pending">Pending</option>
+                                                                                            <option value="Active" data-select2-id="10" id="accountStatus" value="Active">Active</option>
+                                                                                        </select>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group col-sm-10">

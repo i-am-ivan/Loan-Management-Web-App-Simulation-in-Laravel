@@ -18,8 +18,8 @@
         <div class="navbar-menu-wrapper d-flex align-items-top">
           <ul class="navbar-nav">
             <li class="nav-item fw-semibold d-none d-lg-block ms-0">
-              <h1 class="welcome-text"><span class="text-black fw-bold"> <i class="menu-icon mdi mdi-chart-areaspline"></i> {{ $heading }}</span> Overview </h1>
-              <h3 class="welcome-sub-text"> {{ $subHeading }} </h3>
+              <h1 class="welcome-text"><span class="text-black fw-bold"> <i class="menu-icon mdi mdi-chart-areaspline"></i> {{ $heading }}</span> {{ $subHeading1 }} </h1>
+              <h3 class="welcome-sub-text"> {{ $subHeading2 }} </h3>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">

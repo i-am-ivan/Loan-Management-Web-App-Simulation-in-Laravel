@@ -15,7 +15,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ route('admin.dashboard') }}">
                 <i class="mdi mdi-grid-large menu-icon"></i>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Main Dashboard</span>
               </a>
             </li>
             <li class="nav-item nav-category">Administration</li>
