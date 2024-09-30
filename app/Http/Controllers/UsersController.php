@@ -11,7 +11,11 @@ class UsersController extends Controller
 {
     // Show all system users dashboard with all users
     public function userDashboard(){
+
         $systemUsers = SystemUsers::all();
+
+        #dd($systemUsers);
+
         return view('Users.usersDashboard',[
             'heading' => 'Users',
             'subHeading1' => 'Management',
@@ -20,7 +24,7 @@ class UsersController extends Controller
             'userName' => 'I-Am-Ivan',
             'subHeading2' => 'You have full control to manage user account settings.',
             'accountStatus1' => 'Active',
-            'users' => $systemUsers, // Pass users to view
+            'users' => $systemUsers // Pass users to view
         ]);
     }
 
@@ -52,11 +56,5 @@ class UsersController extends Controller
 
         // Reload with success message
         return redirect()->route('Users.users-dashboard')->with('success', 'User created successfully');
-    }
-
-    // Get all users after inserting
-    public function getAllUsers(){
-        $systemUsers = SystemUsers::all();
-        return response()->json($systemUsers);
     }
 }

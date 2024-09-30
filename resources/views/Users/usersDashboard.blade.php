@@ -81,6 +81,7 @@
                                                                 </ul>
                                                             </div>
                                                         @endif
+
                                                         <div class="col-12 grid-margin stretch-card">
                                                             <div class="card card-rounded">
                                                                 <div class="card-body">
@@ -111,46 +112,45 @@
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody>
-                                                                                @forelse($users as $user)
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ $user->user_id }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $user->username }}</h6>
-                                                                                            <p>{{ $user->role }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-success">{{ $user->is_active }}</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        {{ $user->created_at->format('Y-m-d') }}
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                @empty
+                                                                                @foreach($users as $key => $user)
                                                                                     <tr>
-                                                                                        <td colspan="6"> No users found.</td>
+                                                                                        <td>
+                                                                                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                                <span>{{ ++$key }}</span>
+                                                                                            </a>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="d-flex">
+                                                                                                <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                                <div>
+                                                                                                    <h6>{{ $user->username }}</h6>
+                                                                                                    <p>{{ $user->role }}</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="badge badge-opacity-success">{{ $user->is_active }}</div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div>
+                                                                                                <h6>{{ $userName }}</h6>
+                                                                                                <p>{{ $userRole1 }}</p>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            {{ $user->created_at->format('Y-m-d') }}
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="btn-wrapper">
+                                                                                                <a href="#" class="btn btn-default text-success me-0">
+                                                                                                    <i class="icon-eye"></i> View
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </td>
                                                                                     </tr>
-                                                                                @endforelse
+                                                                                @endforeach
                                                                             </tbody>
+
                                                                         </table>
                                                                     </div>
                                                                     <br>
@@ -249,7 +249,7 @@
                                                                                 <div class="form-group col-sm-12">
                                                                                     <div class=" col-sm-10">
                                                                                         <label for="exampleInputConfirmPassword1"><i class="mdi mdi-account-key text-muted me-1"></i>Confirm Password</label>
-                                                                                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" minlength="8" required="">
+                                                                                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" minlength="8" required>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="nk-block-head-content">
@@ -271,7 +271,7 @@
                                                                                             <i class="mdi mdi-account-lock text-muted me-1"></i>Account Status
                                                                                         </label>
                                                                                         <!--Dropdown foe user status-->
-                                                                                        <select class="form-control js-select2 select2-hidden-accessible" data-select2-id="10" tabindex="-1" aria-hidden="true" id="is_active" name="is_active">
+                                                                                        <select class="form-control js-select2" aria-hidden="true" id="is_active" name="is_active" required>
                                                                                             <option value="Pending" {{ old('is_active') == 'Pending' ? 'selected' : '' }}>Pending</option>
                                                                                             <option value="Active" {{ old('is_active') == 'Active' ? 'selected' : '' }}>Active</option>
                                                                                             <option value="Deactivated" {{ old('is_active') == 'Deactivated' ? 'selected' : '' }}>Deactivated</option>

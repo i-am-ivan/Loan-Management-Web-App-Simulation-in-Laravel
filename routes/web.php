@@ -48,6 +48,4 @@ Route::prefix('Users')->group(function () {
     Route::get('/usersDashboard', [UsersController::class, 'userDashboard'])->name('users.users-dashboard');
     // Handle form submission
     Route::post('/add',[UsersController::class, 'addNewUser'])->name('users.add-new');
-    // Get all users
-    Route::get('/all',[UsersController::class, 'getAllUsers'])->name('users.get-all');
 });
