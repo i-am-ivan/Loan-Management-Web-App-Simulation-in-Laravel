@@ -34,15 +34,15 @@
                 </div>
                 <h4>Access The Loan Management Console</h4>
                 <h6 class="fw-light">Sign in to continue.</h6>
-                <form class="pt-3">
+                <form class="pt-3" action="{{ route('admin.dashboard') }}">
                   <div class="form-group">
                     <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" required>
                   </div>
                   <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required minlength="8">
                   </div>
                   <div class="mt-3 d-grid gap-2">
-                    <a class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn" href="{{ route('admin.dashboard') }}">SIGN IN</a>
+                    <button class="btn btn-block btn-primary btn-lg fw-medium auth-form-btn">SIGN IN</button>
                   </div>
                   <div class="my-2 d-flex justify-content-between align-items-center">
                     <div class="form-check">

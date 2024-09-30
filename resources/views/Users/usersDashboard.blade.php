@@ -12,61 +12,57 @@
                                             <li class="nav-item" role="presentation">
                                                 <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">System {{ $heading }} Overview</a>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">User Settings</a>
-                                            </li>
                                         </ul>
                                     </div>
                                     <div class="tab-content tab-content-basic">
                                         <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                                             <div class="row">
-                                                <div class="col-sm-12">
-                                                    <!-- Main User Stats Cards -->
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-4 d-flex flex-column">
-                                                <div class="row flex-grow">
-                                                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
-                                                        <div class="card bg-info card-rounded">
-                                                            <div class="card-body pb-0">
-                                                            <h4 class="card-title card-title-dash text-white mb-4"><i class="mdi mdi-account-circle-outline"></i> User Accounts Summary</h4>
-                                                            <div class="row">
-                                                                <div class="col-sm-8">
-                                                                <p class="status-summary-ight-white mb-1 text-white">System Accounts</p>
-                                                                <h2 class="text-white">357</h2>
-                                                                </div>
-                                                                <div class="col-sm-4">
-                                                                <div class="status-summary-chart-wrapper pb-4">
+                                                <div class="col-lg-8 d-flex flex-column">
+                                                    <div class="row flex-grow">
+                                                        <div class="col-md-4 col-lg-4 grid-margin stretch-card">
+                                                            <div class="card bg-info card-rounded">
+                                                                <div class="card-body pb-0">
+                                                                    <h5 class="card-title card-title-dash text-white mb-4"><i class="mdi mdi-account-circle-outline"></i> User Accounts Summary</h5>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-8">
+                                                                        <p class="status-summary-ight-white mb-1 text-white">System Accounts</p>
+                                                                        <h2 class="text-white">357</h2>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                        <div class="status-summary-chart-wrapper pb-4">
 
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-12 grid-margin stretch-card">
-                                                        <div class="card card-rounded">
-                                                            <div class="card-body pb-0">
-                                                            <h4 class="card-title card-title-dash mb-4"> System Accounts Status Summary</h4>
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <p class="status-summary-ight-grey mb-1"><i class="mdi mdi-account-circle-outline"></i> Active System Accounts</p>
-                                                                    <h2 class="text-success">257</h2>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="status-summary-chart-wrapper pb-4">
-                                                                        <p class="status-summary-ight-grey mb-1"><i class="mdi mdi-account-circle-outline"></i> Deactivate System Accounts</p>
-                                                                        <h2 class="text-danger">100</h2>
+                                                                        </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-8 grid-margin stretch-card">
+                                                            <div class="card card-rounded">
+                                                                <div class="card-body pb-0">
+                                                                <h4 class="card-title card-title-dash mb-4"> System Accounts Status Summary</h4>
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="status-summary-ight-grey mb-1"><i class="mdi mdi-account-circle-outline"></i> Active System Accounts</p>
+                                                                        <h2 class="text-success">257</h2>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <div class="status-summary-chart-wrapper pb-4">
+                                                                            <p class="status-summary-ight-grey mb-1"><i class="mdi mdi-account-circle-outline"></i> Deactivate System Accounts</p>
+                                                                            <h2 class="text-danger">100</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <!-- Lists og Users here -->
                                                     </div>
                                                 </div>
-                                                </div>
+                                            </div>
+                                            <div class="row">
                                                 <div class="col-lg-8 d-flex flex-column">
+                                                    <!-- Table Here -->
                                                     <div class="row flex-grow">
                                                         <div class="col-12 grid-margin stretch-card">
                                                             <div class="card card-rounded">
@@ -99,7 +95,7 @@
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td>
-                                                                                        <a href="#">
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
                                                                                             <span>{{ '1001' }}</span>
                                                                                         </a>
                                                                                     </td>
@@ -128,36 +124,186 @@
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                <td>
-                                                                                    {{ '1002' }}
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="d-flex">
-                                                                                    <img src="../assets/images/faces/face2.jpg" alt="">
-                                                                                    <div>
-                                                                                        <h6>Laura Brooks</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="badge badge-opacity-success">Active</div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div>
-                                                                                        <h6>{{ $userName }}</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
-                                                                                    </div>
-                                                                                </td>
+                                                                                    <td>
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                            <span>{{ '1002' }}</span>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-success">Active</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                            <span>{{ '1003' }}</span>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-warning">Pending</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                            <span>{{ '1004' }}</span>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-danger">Deactivated</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                            <span>{{ '1005' }}</span>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole2 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-success">Active</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
+                                                                                            <span>{{ '1006' }}</span>
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex ">
+                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole2 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-success">Active</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        {{ '1007' }}
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="d-flex">
+                                                                                        <img src="../assets/images/faces/face2.jpg" alt="">
+                                                                                        <div>
+                                                                                            <h6>Laura Brooks</h6>
+                                                                                            <p>{{ $userRole2 }}</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="badge badge-opacity-warning">Pending</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div>
+                                                                                            <h6>{{ $userName }}</h6>
+                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="btn-wrapper">
+                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-download"></i> View </a>
+                                                                                        </div>
+                                                                                    </td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                 <td>
-                                                                                    {{ '1003' }}
+                                                                                    {{ '1008' }}
                                                                                 </td>
                                                                                 <td>
                                                                                     <div class="d-flex">
@@ -185,7 +331,7 @@
                                                                                 </tr>
                                                                                 <tr>
                                                                                 <td>
-                                                                                    {{ '1004' }}
+                                                                                    {{ '1009' }}
                                                                                 </td>
                                                                                 <td>
                                                                                     <div class="d-flex">
@@ -213,14 +359,14 @@
                                                                                 </tr>
                                                                                 <tr>
                                                                                 <td>
-                                                                                    {{ '1005' }}
+                                                                                    {{ '1010' }}
                                                                                 </td>
                                                                                 <td>
                                                                                     <div class="d-flex">
                                                                                     <img src="../assets/images/faces/face5.jpg" alt="">
                                                                                     <div>
                                                                                         <h6>Katherine Butler</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
+                                                                                        <p>{{ $userRole2 }}</p>
                                                                                     </div>
                                                                                     </div>
                                                                                 </td>
@@ -247,104 +393,81 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade show" id="userSettings" role="tabpanel" aria-labelledby="userSettings">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <!-- Main User Stats Cards -->
-
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 d-flex flex-column">
-                                                    <div class="row flex-grow">
-                                                        <div class="col-md-6 col-lg-6 grid-margin stretch-card">
+                                                <div class="col-lg-4 d-flex flex-column">
+                                                        <div class="col-md-6 col-lg-12 grid-margin stretch-card">
                                                             <div class="card card-rounded">
                                                                 <div class="card-body pb-0">
-                                                                <h4 class="card-title card-title-dash mb-4"> System Account Settings</h4>
+                                                                <h3 class="card-title card-title-dash mb-4"><i class="mdi mdi-account-plus"></i> Create New User </h3>
                                                                 <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <h2 class="text-success">{{ $userName }}</h2>
-                                                                        <p class="status-summary-ight-grey mb-1"><i class="mdi mdi-account-circle-outline"></i>{{ $userRole1 }}</p>
+                                                                    <!-- Create new user form here -->
+                                                                    <div class="col-sm-12">
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                              <div class="nk-block-head">
+                                                                                  <div class="nk-block-head-content">
+                                                                                      <h5 class="nk-block-title fw-normal">
+                                                                                          Personal Details
+                                                                                      </h5>
+                                                                                      <div class="card-description">
+                                                                                          <p>You have full control to manage your own account setting.
+                                                                                              <span class="text-primary">
+                                                                                                  <em class="icon ni ni-info" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Tooltip on right" data-bs-original-title="Tooltip on right">
+                                                                                                  </em>
+                                                                                              </span>
+                                                                                          </p>
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <form class="forms-sample">
+                                                                                <div class="form-group col-sm-10">
+                                                                                  <label for="exampleInputUsername1">Username</label>
+                                                                                  <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" minlength="4">
+                                                                                </div>
+                                                                                <div class="form-group col-sm-10">
+                                                                                  <label for="exampleInputEmail1">Email address</label>
+                                                                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="">
+                                                                                </div>
+                                                                                <div class="nk-block-head-content">
+                                                                                    <h5 class="nk-block-title fw-normal">
+                                                                                        Password Confirmation
+                                                                                    </h5>
+                                                                                    <div class="card-description">
+                                                                                        <p>Create New Password for the Account.
+                                                                                            <span class="text-primary">
+                                                                                                <em class="icon ni ni-info" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Tooltip on right" data-bs-original-title="Tooltip on right">
+                                                                                                </em>
+                                                                                            </span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group col-sm-12">
+                                                                                    <div class=" col-sm-10">
+                                                                                        <label for="exampleInputPassword1">Password</label>
+                                                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="8" required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group col-sm-12">
+                                                                                    <div class=" col-sm-10">
+                                                                                        <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                                                                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password" minlength="8" required="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group col-sm-10">
+                                                                                  <button type="submit" class="btn btn-block btn-success btn-lg fw-medium auth-form-btn text-white">Create</button>
+                                                                                  <button class="btn btn-block btn-danger btn-lg fw-medium auth-form-btn text-white">Cancel</button>
+                                                                                </div>
+                                                                              </form>
+                                                                            </div>
+                                                                          </div>
                                                                     </div>
                                                                 </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="row flex-grow">
-                                                            <div class="col-md-6 col-lg-6 grid-margin stretch-card">
-                                                                <div class="card card-rounded">
-                                                                    <div class="card-body pb-0">
-
-                                                                            <div class="card-inner card-inner-lg">
-                                                                                <div class="nk-block">
-                                                                                    <div class="nk-block-head">
-                                                                                        <h4 class="title">Personal Information</h4>
-                                                                                        <p>Basic info, like your name and address, that you use on Nio Platform.</p>
-                                                                                        <hr>
-                                                                                    </div>
-                                                                                    <div class="profile-ud-list pt-2">
-                                                                                        <div class="profile-ud-item">
-                                                                                            <div class="profile-ud wider">
-                                                                                                <span class="profile-ud-label">User ID: </span>
-                                                                                                <span class="profile-ud-value">{{ '1001' }}</span>
-                                                                                            </div><br>
-                                                                                            <div class="profile-ud-item">
-                                                                                                <div class="profile-ud wider">
-                                                                                                    <span class="profile-ud-label">Username: </span>
-                                                                                                    <span class="profile-ud-value">{{ $userName }}</span>
-                                                                                                </div>
-                                                                                            </div><br>
-                                                                                            <div class="profile-ud-item">
-                                                                                                <div class="profile-ud wider">
-                                                                                                    <span class="profile-ud-label">User Email: </span>
-                                                                                                    <span class="profile-ud-value">{{ $userName }}</span>
-                                                                                                </div>
-                                                                                            </div><br>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="nk-block">
-                                                                                    <div class="nk-block-head nk-block-head-line">
-                                                                                        <h4 class="title overline-title text-base">Additional Information</h4>
-                                                                                        <hr>
-                                                                                    </div>
-                                                                                    <div class="profile-ud-list">
-                                                                                        <div class="profile-ud-item">
-                                                                                            <div class="profile-ud wider">
-                                                                                                <span class="profile-ud-label">Account Status: </span>
-                                                                                                <span class="profile-ud-value">{{ $accountStatus1 }}</span>
-                                                                                            </div>
-                                                                                        </div><br>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="nk-divider divider md"></div>
-                                                                                    <div class="nk-block">
-                                                                                        <div class="bq-note">
-                                                                                            <div class="bq-note-item">
-                                                                                                <div class="bq-note-meta">
-                                                                                                    <span class="bq-note-added">Added on
-                                                                                                        <span class="date">September 15, 2024</span> at
-                                                                                                        <span class="time">5:34 PM</span>
-                                                                                                    </span>
-                                                                                                    <span class="bq-note-sep sep">|</span>
-                                                                                                    <span class="bq-note-by">By
-                                                                                                        <span>{{ $userName }}</span>
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
+
                                         </div>
                                     </div>
                             </div>
