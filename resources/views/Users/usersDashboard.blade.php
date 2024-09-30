@@ -64,6 +64,23 @@
                                                 <div class="col-lg-8 d-flex flex-column">
                                                     <!-- Table Here -->
                                                     <div class="row flex-grow">
+                                                        <!-- Display Success Message -->
+                                                        @if(session('success'))
+                                                            <div class="alert alert-success">
+                                                                {{ session('success') }}
+                                                            </div>
+                                                        @endif
+
+                                                        <!-- Display Validation Errors -->
+                                                        @if($errors->any())
+                                                            <div class="alert alert-danger">
+                                                                <ul>
+                                                                    @foreach($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        @endif
                                                         <div class="col-12 grid-margin stretch-card">
                                                             <div class="card card-rounded">
                                                                 <div class="card-body">
@@ -94,23 +111,24 @@
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody>
+                                                                                @forelse($users as $user)
                                                                                 <tr>
                                                                                     <td>
                                                                                         <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1001' }}</span>
+                                                                                            <span>{{ $user->user_id }}</span>
                                                                                         </a>
                                                                                     </td>
                                                                                     <td>
                                                                                         <div class="d-flex ">
                                                                                         <img src="../assets/images/faces/face1.jpg" alt="">
                                                                                         <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
+                                                                                            <h6>{{ $user->username }}</h6>
+                                                                                            <p>{{ $user->role }}</p>
                                                                                         </div>
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <div class="badge badge-opacity-success">Active</div>
+                                                                                        <div class="badge badge-opacity-success">{{ $user->is_active }}</div>
                                                                                     </td>
                                                                                     <td>
                                                                                         <div>
@@ -119,7 +137,7 @@
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        September 28, 2024 18:56:42
+                                                                                        {{ $user->created_at->format('Y-m-d') }}
                                                                                     </td>
                                                                                     <td>
                                                                                         <div class="btn-wrapper">
@@ -127,295 +145,11 @@
                                                                                         </div>
                                                                                     </td>
                                                                                 </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1002' }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-success">Active</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1003' }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-warning">Pending</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1004' }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-danger">Deactivated</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1005' }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole2 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-success">Active</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        <a a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#userSettings" role="tab" aria-selected="false" tabindex="-1">
-                                                                                            <span>{{ '1006' }}</span>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex ">
-                                                                                        <img src="../assets/images/faces/face1.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole2 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-success">Active</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td>
-                                                                                        {{ '1007' }}
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="d-flex">
-                                                                                        <img src="../assets/images/faces/face2.jpg" alt="">
-                                                                                        <div>
-                                                                                            <h6>Laura Brooks</h6>
-                                                                                            <p>{{ $userRole2 }}</p>
-                                                                                        </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="badge badge-opacity-warning">Pending</div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div>
-                                                                                            <h6>{{ $userName }}</h6>
-                                                                                            <p>{{ $userRole1 }}</p>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        September 28, 2024 18:56:42
-                                                                                    </td>
-                                                                                    <td>
-                                                                                        <div class="btn-wrapper">
-                                                                                            <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                <td>
-                                                                                    {{ '1008' }}
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="d-flex">
-                                                                                    <img src="../assets/images/faces/face3.jpg" alt="">
-                                                                                    <div>
-                                                                                        <h6>Wayne Murphy</h6>
-                                                                                        <p>{{ $userRole2 }}</p>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="badge badge-opacity-success">Active</div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div>
-                                                                                        <h6>{{ $userName }}</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    September 28, 2024 18:56:42
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                    </div>
-                                                                                </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                <td>
-                                                                                    {{ '1009' }}
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="d-flex">
-                                                                                    <img src="../assets/images/faces/face4.jpg" alt="">
-                                                                                    <div>
-                                                                                        <h6>Matthew Bailey</h6>
-                                                                                        <p>{{ $userRole2 }}</p>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="badge badge-opacity-success">Active</div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div>
-                                                                                        <h6>{{ $userName }}</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    September 28, 2024 18:56:42
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                    </div>
-                                                                                </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                <td>
-                                                                                    {{ '1010' }}
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="d-flex">
-                                                                                    <img src="../assets/images/faces/face5.jpg" alt="">
-                                                                                    <div>
-                                                                                        <h6>Katherine Butler</h6>
-                                                                                        <p>{{ $userRole2 }}</p>
-                                                                                    </div>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="badge badge-opacity-warning">Pending</div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div>
-                                                                                        <h6>{{ $userName }}</h6>
-                                                                                        <p>{{ $userRole1 }}</p>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    September 28, 2024 18:56:42
-                                                                                </td>
-                                                                                <td>
-                                                                                    <div class="btn-wrapper">
-                                                                                        <a href="#" class="btn btn-default text-success me-0"><i class="icon-eye"></i> View </a>
-                                                                                    </div>
-                                                                                </td>
-                                                                                </tr>
+                                                                                @empty
+                                                                                    <tr>
+                                                                                        <td colspan="6"> No users found.</td>
+                                                                                    </tr>
+                                                                                @endforelse
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
@@ -474,14 +208,21 @@
                                                                                       </div>
                                                                                   </div>
                                                                               </div>
-                                                                              <form class="forms-sample" method="POST" action="">
+                                                                              <form class="forms-sample" method="POST" action="{{ route('users.add-new') }}">
+                                                                                @csrf
                                                                                 <div class="form-group col-sm-10">
                                                                                   <label for="exampleInputUsername1"><i class="mdi mdi-account text-muted me-1"></i> Username</label>
-                                                                                  <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" minlength="4" @required(true)>
+                                                                                  <input type="text" class="form-control" id="username" name="username" placeholder="Username" minlength="4" @required(true)>
+                                                                                  @error('username')
+                                                                                    <small class="text-danger">{{ $message }}</small>
+                                                                                  @enderror
                                                                                 </div>
                                                                                 <div class="form-group col-sm-10">
                                                                                   <label for="exampleInputEmail1"><i class="mdi mdi-email text-muted me-1"></i>Email address</label>
-                                                                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required="">
+                                                                                  <input type="email" class="form-control" id="email" placeholder="Email" name="email" required="">
+                                                                                  @error('email')
+                                                                                    <small class="text-danger">{{ $message }}</small>
+                                                                                  @enderror
                                                                                 </div>
                                                                                 <div class="nk-block-head-content">
                                                                                     <h5 class="nk-block-title fw-normal">
@@ -499,13 +240,16 @@
                                                                                 <div class="form-group col-sm-12">
                                                                                     <div class=" col-sm-10">
                                                                                         <label for="exampleInputPassword1"><i class="mdi mdi-account-key text-muted me-1"></i>Password</label>
-                                                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="8" required="">
+                                                                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" minlength="8" required="">
+                                                                                        @error('password')
+                                                                                            <small class="text-danger">{{ $message }}</small>
+                                                                                        @enderror
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group col-sm-12">
                                                                                     <div class=" col-sm-10">
                                                                                         <label for="exampleInputConfirmPassword1"><i class="mdi mdi-account-key text-muted me-1"></i>Confirm Password</label>
-                                                                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder=" Confirm Password" minlength="8" required="">
+                                                                                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm Password" minlength="8" required="">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="nk-block-head-content">
@@ -527,15 +271,19 @@
                                                                                             <i class="mdi mdi-account-lock text-muted me-1"></i>Account Status
                                                                                         </label>
                                                                                         <!--Dropdown foe user status-->
-                                                                                        <select class="form-control js-select2 select2-hidden-accessible" data-select2-id="10" tabindex="-1" aria-hidden="true">
-                                                                                            <option value="Pending" data-select2-id="10" id="accountStatus" value="Pending">Pending</option>
-                                                                                            <option value="Active" data-select2-id="10" id="accountStatus" value="Active">Active</option>
+                                                                                        <select class="form-control js-select2 select2-hidden-accessible" data-select2-id="10" tabindex="-1" aria-hidden="true" id="is_active" name="is_active">
+                                                                                            <option value="Pending" {{ old('is_active') == 'Pending' ? 'selected' : '' }}>Pending</option>
+                                                                                            <option value="Active" {{ old('is_active') == 'Active' ? 'selected' : '' }}>Active</option>
+                                                                                            <option value="Deactivated" {{ old('is_active') == 'Deactivated' ? 'selected' : '' }}>Deactivated</option>
                                                                                         </select>
+                                                                                        @error('is_active')
+                                                                                            <small class="text-danger">{{ $message }}</small>
+                                                                                        @enderror
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group col-sm-10">
                                                                                   <button type="submit" class="btn btn-block btn-success btn-lg fw-medium auth-form-btn text-white">Create</button>
-                                                                                  <button class="btn btn-block btn-danger btn-lg fw-medium auth-form-btn text-white">Cancel</button>
+                                                                                  <a href="{{ route('users.users-dashboard') }}" class="btn btn-block btn-danger btn-lg fw-medium auth-form-btn text-white">Cancel</a>
                                                                                 </div>
                                                                               </form>
                                                                             </div>

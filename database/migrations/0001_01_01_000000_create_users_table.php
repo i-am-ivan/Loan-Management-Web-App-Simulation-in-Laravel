@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum('role', ['Admin', 'Clerk'])->default('clerk');
             $table->enum('is_active', ['Active','Pending','Deactivated'])->default('Active');
+            $table->timestamps();
         });
     }
 

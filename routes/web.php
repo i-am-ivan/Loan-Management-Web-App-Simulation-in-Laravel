@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 // Admin Login Page
 Route::get('/', function () {
@@ -44,9 +45,9 @@ Route::prefix('Customers')->group(function () {
 // User routes
 Route::prefix('Users')->group(function () {
     // Users Management Dashboard
-    Route::get('/usersDashboard', function(){
-        return view('Users.usersDashboard', ['heading' => 'Users', 'subHeading1' => 'Management', 'userRole1' => 'Administrator', 'userRole2' => 'Clerk', 'userName' => 'I-Am-Ivan', 'subHeading2' => 'You have full control to manage user account setting.', 'accountStatus1' => 'Active']);
-    })->name('users.users-dashboard');
-    Route::post('usersDashboard','UsersController@addNewUser');
-    Route::get('usersDashboard','UsersController@getAllUsers');
+    Route::get('/usersDashboard', [UsersController::class, 'userDashboard'])->name('users.users-dashboard');
+    // Handle form submission
+    Route::post('/add',[UsersController::class, 'addNewUser'])->name('users.add-new');
+    // Get all users
+    Route::get('/all',[UsersController::class, 'getAllUsers'])->name('users.get-all');
 });
